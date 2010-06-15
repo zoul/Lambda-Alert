@@ -14,14 +14,12 @@ note that the blocks are currently only available in the 4.0 SDK.
 Usage
 -----
 
-Very simple:
-
     LambdaAlert *alert = [[LambdaAlert alloc]
         initWithTitle:@"Test Alert"
         message:@"See if the thing works."];
     [alert addButtonWithTitle:@"Foo" block:^{ NSLog(@"Foo"); }];
     [alert addButtonWithTitle:@"Bar" block:^{ NSLog(@"Bar"); }];
-    [alert setCancelButtonWithTitle:@"Cancel" block:^{ NSLog(@"Cancelled"); }];
+    [alert setCancelButtonWithTitle:@"Cancel" block:NULL];
     [alert show];
     [alert release];
 

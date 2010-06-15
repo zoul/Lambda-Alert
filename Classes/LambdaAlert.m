@@ -32,6 +32,7 @@
 
 - (void) addButtonWithTitle: (NSString*) title block: (AlertCallback) block
 {
+    if (!block) block = ^{};
     [alert addButtonWithTitle:title];
     [blocks addObject:[[block copy] autorelease]];
 }
