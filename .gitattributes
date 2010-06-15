@@ -1,0 +1,2 @@
+*.pbxproj -diff
+*.xib -diff
