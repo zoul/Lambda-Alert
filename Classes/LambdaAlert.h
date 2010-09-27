@@ -7,7 +7,6 @@ typedef void (^AlertCallback)(void);
 }
 
 - (id) initWithTitle: (NSString*) title message: (NSString*) message;
-- (void) setCancelButtonWithTitle: (NSString*) title block: (AlertCallback) block;
 - (void) addButtonWithTitle: (NSString*) title block: (AlertCallback) block;
 - (void) show;
 

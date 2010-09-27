@@ -24,12 +24,6 @@
     [self retain];
 }
 
-- (void) setCancelButtonWithTitle: (NSString*) title block: (AlertCallback) block
-{
-    [self addButtonWithTitle:title block:block];
-    [alert setCancelButtonIndex:alert.numberOfButtons-1];
-}
-
 - (void) addButtonWithTitle: (NSString*) title block: (AlertCallback) block
 {
     if (!block) block = ^{};
