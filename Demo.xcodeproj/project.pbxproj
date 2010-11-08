@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA96B9612886C1000B1A3D0 /* LambdaSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA96B9512886C1000B1A3D0 /* LambdaSheet.m */; };
 		0DFDC40B11C76C0300E96A5A /* LambdaAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDC40A11C76C0300E96A5A /* LambdaAlert.m */; };
 		1D3623260D0F684500981E51 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Application.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DA96B9412886C1000B1A3D0 /* LambdaSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambdaSheet.h; sourceTree = "<group>"; };
+		0DA96B9512886C1000B1A3D0 /* LambdaSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LambdaSheet.m; sourceTree = "<group>"; };
 		0DFDC40911C76C0300E96A5A /* LambdaAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambdaAlert.h; sourceTree = "<group>"; };
 		0DFDC40A11C76C0300E96A5A /* LambdaAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LambdaAlert.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +55,8 @@
 				1D3623250D0F684500981E51 /* Application.m */,
 				0DFDC40911C76C0300E96A5A /* LambdaAlert.h */,
 				0DFDC40A11C76C0300E96A5A /* LambdaAlert.m */,
+				0DA96B9412886C1000B1A3D0 /* LambdaSheet.h */,
+				0DA96B9512886C1000B1A3D0 /* LambdaSheet.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* Application.m in Sources */,
 				0DFDC40B11C76C0300E96A5A /* LambdaAlert.m in Sources */,
+				0DA96B9612886C1000B1A3D0 /* LambdaSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,16 @@
 #import "Application.h"
 #import "LambdaAlert.h"
+#import "LambdaSheet.h"
 
 @implementation Application
 @synthesize window;
 
 - (void) applicationDidFinishLaunching: (UIApplication*) application
+{
+    [window makeKeyAndVisible];
+}
+
+- (IBAction) showDemoAlert
 {
     LambdaAlert *alert = [[LambdaAlert alloc]
         initWithTitle:@"Test Alert"
@@ -14,7 +20,17 @@
     [alert addButtonWithTitle:@"Cancel" block:NULL];
     [alert show];
     [alert release];
-    [window makeKeyAndVisible];
+}
+
+- (IBAction) showDemoActionSheet
+{
+    LambdaSheet *sheet = [[LambdaSheet alloc] initWithTitle:@"Action Sheet"];
+    [sheet addButtonWithTitle:@"Miles" block:^{ NSLog(@"Trumpet"); }];
+    [sheet addButtonWithTitle:@"Trane" block:^{ NSLog(@"Saxophone"); }];
+    [sheet addDestructiveButtonWithTitle:@"Monk" block:^{ NSLog(@"Piano"); }];
+    [sheet addCancelButtonWithTitle:@"Back to the Head"];
+    [sheet showInView:window];
+    [sheet release];
 }
 
 - (void) dealloc
