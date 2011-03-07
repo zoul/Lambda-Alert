@@ -1,6 +1,12 @@
 #import "LambdaSheet.h"
 
+@interface LambdaSheet () <UIActionSheetDelegate>
+@property(retain) UIActionSheet *sheet;
+@property(retain) NSMutableArray *blocks;
+@end
+
 @implementation LambdaSheet
+@synthesize sheet, blocks;
 
 - (id) initWithTitle: (NSString*) title
 {

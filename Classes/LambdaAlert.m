@@ -1,6 +1,12 @@
 #import "LambdaAlert.h"
 
+@interface LambdaAlert () <UIAlertViewDelegate>
+@property(retain) UIAlertView *alert;
+@property(retain) NSMutableArray *blocks;
+@end
+
 @implementation LambdaAlert
+@synthesize alert, blocks;
 
 - (id) initWithTitle: (NSString*) title message: (NSString*) message
 {

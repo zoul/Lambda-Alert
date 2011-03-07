@@ -1,10 +1,6 @@
 typedef void (^SheetCallback)(void);
 
-@interface LambdaSheet : NSObject <UIActionSheetDelegate>
-{
-    UIActionSheet *sheet;
-    NSMutableArray *blocks;
-}
+@interface LambdaSheet : NSObject {}
 
 - (id) initWithTitle: (NSString*) title;
 
