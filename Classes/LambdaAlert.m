@@ -30,7 +30,7 @@
     [self retain];
 }
 
-- (void) addButtonWithTitle: (NSString*) title block: (AlertCallback) block
+- (void) addButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
 {
     if (!block) block = ^{};
     [alert addButtonWithTitle:title];
@@ -40,7 +40,7 @@
 - (void) alertView: (UIAlertView*) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex
 {
     if (buttonIndex >= 0 && buttonIndex < [blocks count]) {
-        AlertCallback block = [blocks objectAtIndex:buttonIndex];
+        dispatch_block_t block = [blocks objectAtIndex:buttonIndex];
         block();
     }
     [self release];

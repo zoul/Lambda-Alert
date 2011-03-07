@@ -26,20 +26,20 @@
 
 #pragma mark Button Management
 
-- (void) addButtonWithTitle: (NSString*) title block: (SheetCallback) block
+- (void) addButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
 {
     if (!block) block = ^{};
     [sheet addButtonWithTitle:title];
     [blocks addObject:[[block copy] autorelease]];
 }
 
-- (void) addDestructiveButtonWithTitle: (NSString*) title block: (SheetCallback) block
+- (void) addDestructiveButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
 {
     [self addButtonWithTitle:title block:block];
     [sheet setDestructiveButtonIndex:sheet.numberOfButtons-1];
 }
 
-- (void) addCancelButtonWithTitle: (NSString*) title block: (SheetCallback) block
+- (void) addCancelButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
 {
     [self addButtonWithTitle:title block:block];
     [sheet setCancelButtonIndex:sheet.numberOfButtons-1];
@@ -76,7 +76,7 @@
 {
     NSParameterAssert(actionSheet == sheet);
     if (buttonIndex >= 0 && buttonIndex < [blocks count]) {
-        SheetCallback block = [blocks objectAtIndex:buttonIndex];
+        dispatch_block_t block = [blocks objectAtIndex:buttonIndex];
         block();
     }
     [self release];
