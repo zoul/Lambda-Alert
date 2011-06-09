@@ -8,9 +8,9 @@ delegate callbacks and button indexes.
 Installing
 ----------
 
-Simply grab the `LambdaAlert.{h,m}` or `LambdaSheet.{h,m}` files from this
-repository. Please note that the blocks are only available in the 4.0+ SDK
-for iPhones and 4.2+ for iPad.
+You can clone the whole repository and drag the project to an Xcode workspace.
+Then you can add libLambdaAlert to the list of linked libraries for your target
+and start using the code.
 
 Usage
 -----
