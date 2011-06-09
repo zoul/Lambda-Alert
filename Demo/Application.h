@@ -1,7 +1,4 @@
-@interface Application : NSObject <UIApplicationDelegate>
-{
-    UIWindow *window;
-}
+@interface Application : NSObject <UIApplicationDelegate> {}
 
 @property(retain) IBOutlet UIWindow *window;
 
@@ -9,4 +6,3 @@
 - (IBAction) showDemoActionSheet;
 
 @end
-

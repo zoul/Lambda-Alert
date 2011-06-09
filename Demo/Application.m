@@ -5,9 +5,10 @@
 @implementation Application
 @synthesize window;
 
-- (void) applicationDidFinishLaunching: (UIApplication*) application
+- (BOOL) application: (UIApplication*) application didFinishLaunchingWithOptions: (NSDictionary*) launchOptions
 {
     [window makeKeyAndVisible];
+    return YES;
 }
 
 - (IBAction) showDemoAlert

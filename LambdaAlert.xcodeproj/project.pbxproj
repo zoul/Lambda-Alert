@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D75681313A0A8590031D9FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75681213A0A8590031D9FA /* Foundation.framework */; };
+		0D75681F13A0A8C10031D9FA /* prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0D75681E13A0A8C10031D9FA /* prefix.pch */; };
+		0D75682413A0A8CE0031D9FA /* LambdaAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D75682013A0A8CE0031D9FA /* LambdaAlert.h */; };
+		0D75682513A0A8CE0031D9FA /* LambdaAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75682113A0A8CE0031D9FA /* LambdaAlert.m */; };
+		0D75682613A0A8CE0031D9FA /* LambdaSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D75682213A0A8CE0031D9FA /* LambdaSheet.h */; };
+		0D75682713A0A8CE0031D9FA /* LambdaSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75682313A0A8CE0031D9FA /* LambdaSheet.m */; };
+		0D75685613A0A9890031D9FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75682E13A0A95C0031D9FA /* UIKit.framework */; };
+		0D75685713A0A9890031D9FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75681213A0A8590031D9FA /* Foundation.framework */; };
+		0D75685813A0A9890031D9FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75683113A0A95C0031D9FA /* CoreGraphics.framework */; };
+		0D75686113A0A9890031D9FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75686013A0A9890031D9FA /* main.m */; };
+		0D75686413A0A9890031D9FA /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75686313A0A9890031D9FA /* Application.m */; };
+		0D75686E13A0AA290031D9FA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D75686D13A0AA290031D9FA /* MainWindow.xib */; };
+		0D75687813A0AB140031D9FA /* libLambdaAlert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75680F13A0A8590031D9FA /* libLambdaAlert.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D75686B13A0AA200031D9FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D75680613A0A8590031D9FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D75680E13A0A8590031D9FA;
+			remoteInfo = LambdaAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D75680F13A0A8590031D9FA /* libLambdaAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLambdaAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D75681213A0A8590031D9FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D75681E13A0A8C10031D9FA /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = SOURCE_ROOT; };
+		0D75682013A0A8CE0031D9FA /* LambdaAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LambdaAlert.h; path = Sources/LambdaAlert.h; sourceTree = SOURCE_ROOT; };
+		0D75682113A0A8CE0031D9FA /* LambdaAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LambdaAlert.m; path = Sources/LambdaAlert.m; sourceTree = SOURCE_ROOT; };
+		0D75682213A0A8CE0031D9FA /* LambdaSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LambdaSheet.h; path = Sources/LambdaSheet.h; sourceTree = SOURCE_ROOT; };
+		0D75682313A0A8CE0031D9FA /* LambdaSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LambdaSheet.m; path = Sources/LambdaSheet.m; sourceTree = SOURCE_ROOT; };
+		0D75682E13A0A95C0031D9FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0D75683113A0A95C0031D9FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0D75685413A0A9890031D9FA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D75685B13A0A9890031D9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D75686013A0A9890031D9FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D75686213A0A9890031D9FA /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		0D75686313A0A9890031D9FA /* Application.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		0D75686D13A0AA290031D9FA /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D75680C13A0A8590031D9FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D75681313A0A8590031D9FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D75685113A0A9890031D9FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D75687813A0AB140031D9FA /* libLambdaAlert.a in Frameworks */,
+				0D75685613A0A9890031D9FA /* UIKit.framework in Frameworks */,
+				0D75685713A0A9890031D9FA /* Foundation.framework in Frameworks */,
+				0D75685813A0A9890031D9FA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D75680413A0A8590031D9FA = {
+			isa = PBXGroup;
+			children = (
+				0D75681413A0A8590031D9FA /* Sources */,
+				0D75685913A0A9890031D9FA /* Demo */,
+				0D75681113A0A8590031D9FA /* Frameworks */,
+				0D75681013A0A8590031D9FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D75681013A0A8590031D9FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D75680F13A0A8590031D9FA /* libLambdaAlert.a */,
+				0D75685413A0A9890031D9FA /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D75681113A0A8590031D9FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D75681213A0A8590031D9FA /* Foundation.framework */,
+				0D75682E13A0A95C0031D9FA /* UIKit.framework */,
+				0D75683113A0A95C0031D9FA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D75681413A0A8590031D9FA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0D75682013A0A8CE0031D9FA /* LambdaAlert.h */,
+				0D75682113A0A8CE0031D9FA /* LambdaAlert.m */,
+				0D75682213A0A8CE0031D9FA /* LambdaSheet.h */,
+				0D75682313A0A8CE0031D9FA /* LambdaSheet.m */,
+				0D75681E13A0A8C10031D9FA /* prefix.pch */,
+			);
+			name = Sources;
+			path = LambdaAlert;
+			sourceTree = "<group>";
+		};
+		0D75685913A0A9890031D9FA /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0D75685B13A0A9890031D9FA /* Info.plist */,
+				0D75686213A0A9890031D9FA /* Application.h */,
+				0D75686313A0A9890031D9FA /* Application.m */,
+				0D75686D13A0AA290031D9FA /* MainWindow.xib */,
+				0D75686013A0A9890031D9FA /* main.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0D75680D13A0A8590031D9FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D75681F13A0A8C10031D9FA /* prefix.pch in Headers */,
+				0D75682413A0A8CE0031D9FA /* LambdaAlert.h in Headers */,
+				0D75682613A0A8CE0031D9FA /* LambdaSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0D75680E13A0A8590031D9FA /* LambdaAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D75681913A0A8590031D9FA /* Build configuration list for PBXNativeTarget "LambdaAlert" */;
+			buildPhases = (
+				0D75680B13A0A8590031D9FA /* Sources */,
+				0D75680C13A0A8590031D9FA /* Frameworks */,
+				0D75680D13A0A8590031D9FA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LambdaAlert;
+			productName = LambdaAlert;
+			productReference = 0D75680F13A0A8590031D9FA /* libLambdaAlert.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0D75685313A0A9890031D9FA /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D75686813A0A9890031D9FA /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				0D75685013A0A9890031D9FA /* Sources */,
+				0D75685113A0A9890031D9FA /* Frameworks */,
+				0D75685213A0A9890031D9FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D75686C13A0AA200031D9FA /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 0D75685413A0A9890031D9FA /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D75680613A0A8590031D9FA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0D75680913A0A8590031D9FA /* Build configuration list for PBXProject "LambdaAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0D75680413A0A8590031D9FA;
+			productRefGroup = 0D75681013A0A8590031D9FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D75680E13A0A8590031D9FA /* LambdaAlert */,
+				0D75685313A0A9890031D9FA /* Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D75685213A0A9890031D9FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D75686E13A0AA290031D9FA /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D75680B13A0A8590031D9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D75682513A0A8CE0031D9FA /* LambdaAlert.m in Sources */,
+				0D75682713A0A8CE0031D9FA /* LambdaSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D75685013A0A9890031D9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D75686113A0A9890031D9FA /* main.m in Sources */,
+				0D75686413A0A9890031D9FA /* Application.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D75686C13A0AA200031D9FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D75680E13A0A8590031D9FA /* LambdaAlert */;
+			targetProxy = 0D75686B13A0AA200031D9FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D75681713A0A8590031D9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0D75681813A0A8590031D9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		0D75681A13A0A8590031D9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/LambdaAlert.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0D75681B13A0A8590031D9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/LambdaAlert.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0D75686913A0A9890031D9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Demo/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0D75686A13A0A9890031D9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Demo/Info.plist;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D75680913A0A8590031D9FA /* Build configuration list for PBXProject "LambdaAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D75681713A0A8590031D9FA /* Debug */,
+				0D75681813A0A8590031D9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D75681913A0A8590031D9FA /* Build configuration list for PBXNativeTarget "LambdaAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D75681A13A0A8590031D9FA /* Debug */,
+				0D75681B13A0A8590031D9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D75686813A0A9890031D9FA /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D75686913A0A9890031D9FA /* Debug */,
+				0D75686A13A0A9890031D9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D75680613A0A8590031D9FA /* Project object */;
+}
