@@ -70,6 +70,12 @@
     [self retain];
 }
 
+- (void)showFromBarButtonItem:(UIBarButtonItem*)item
+{
+    [sheet showFromBarButtonItem:item animated:YES];
+    [self retain];
+}
+
 #pragma mark UIActionSheetDelegate
 
 - (void) actionSheet: (UIActionSheet*) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex
