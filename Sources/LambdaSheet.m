@@ -70,7 +70,7 @@
     [self retain];
 }
 
-- (void)showFromBarButtonItem: (UIBarButtonItem*) item
+- (void) showFromBarButtonItem: (UIBarButtonItem*) item
 {
     [sheet showFromBarButtonItem:item animated:YES];
     [self retain];

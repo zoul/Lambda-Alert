@@ -10,6 +10,6 @@
 - (void) showFromTabBar: (UITabBar*) view;
 - (void) showFromToolbar: (UIToolbar*) view;
 - (void) showInView: (UIView*) view;
-- (void)showFromBarButtonItem: (UIBarButtonItem*) item;
+- (void) showFromBarButtonItem: (UIBarButtonItem*) item;
 
 @end
