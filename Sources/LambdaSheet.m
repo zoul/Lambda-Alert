@@ -76,6 +76,12 @@
     [self retain];
 }
 
+- (void) showFromRect: (CGRect) rect inView: (UIView*) view animated: (BOOL) animated
+{
+    [sheet showFromRect:rect inView:view animated:animated];
+    [self retain];
+}
+
 #pragma mark UIActionSheetDelegate
 
 - (void) actionSheet: (UIActionSheet*) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex
