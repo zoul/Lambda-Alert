@@ -82,6 +82,11 @@
     [self retain];
 }
 
+- (void) dismissWithoutActionAnimated: (BOOL) animated
+{
+    [sheet dismissWithClickedButtonIndex:-1 animated:animated];
+}
+
 #pragma mark UIActionSheetDelegate
 
 - (void) actionSheet: (UIActionSheet*) actionSheet didDismissWithButtonIndex: (NSInteger) buttonIndex
