@@ -30,6 +30,9 @@
     [sheet addButtonWithTitle:@"Trane" block:^{ NSLog(@"Saxophone"); }];
     [sheet addDestructiveButtonWithTitle:@"Monk" block:^{ NSLog(@"Piano"); }];
     [sheet addCancelButtonWithTitle:@"Back to the Head"];
+    [sheet setDismissAction:^{
+        NSLog(@"Sheet was dismissed.");
+    }];
     [sheet showInView:window];
     [sheet release];
 }
