@@ -6,7 +6,7 @@
 @end
 
 @implementation LambdaSheet
-@synthesize sheet, blocks;
+@synthesize sheet, blocks, dismissAction;
 
 - (id) initWithTitle: (NSString*) title
 {
@@ -19,6 +19,7 @@
 
 - (void) dealloc
 {
+    [dismissAction release];
     [blocks release];
     [sheet release];
     [super dealloc];
@@ -82,7 +83,7 @@
     [self retain];
 }
 
-- (void) dismissWithoutActionAnimated: (BOOL) animated
+- (void) dismissAnimated: (BOOL) animated
 {
     [sheet dismissWithClickedButtonIndex:-1 animated:animated];
 }
@@ -95,6 +96,9 @@
     if (buttonIndex >= 0 && buttonIndex < [blocks count]) {
         dispatch_block_t block = [blocks objectAtIndex:buttonIndex];
         block();
+    }
+    if (dismissAction != NULL) {
+        dismissAction();
     }
     [self release];
 }
