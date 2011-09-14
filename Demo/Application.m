@@ -19,6 +19,9 @@
     [alert addButtonWithTitle:@"Foo" block:^{ NSLog(@"Foo"); }];
     [alert addButtonWithTitle:@"Bar" block:^{ NSLog(@"Bar"); }];
     [alert addButtonWithTitle:@"Cancel" block:NULL];
+    [alert setDismissAction:^{
+        NSLog(@"Alert was dismissed.");
+    }];
     [alert show];
     [alert release];
 }

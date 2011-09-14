@@ -6,7 +6,7 @@
 @end
 
 @implementation LambdaAlert
-@synthesize alert, blocks;
+@synthesize alert, blocks, dismissAction;
 
 - (id) initWithTitle: (NSString*) title message: (NSString*) message
 {
@@ -19,6 +19,7 @@
 
 - (void) dealloc
 {
+    [dismissAction release];
     [alert release];
     [blocks release];
     [super dealloc];
@@ -42,6 +43,9 @@
     if (buttonIndex >= 0 && buttonIndex < [blocks count]) {
         dispatch_block_t block = [blocks objectAtIndex:buttonIndex];
         block();
+    }
+    if (dismissAction != NULL) {
+        dismissAction();
     }
     [self release];
 }
