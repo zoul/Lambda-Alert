@@ -10,7 +10,7 @@
 
 - (id) initWithTitle: (NSString*) title
 {
-    [super init];
+    self = [super init];
     sheet = [[UIActionSheet alloc] initWithTitle:title delegate:self
         cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
     blocks = [[NSMutableArray alloc] init];
