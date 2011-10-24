@@ -1,12 +1,13 @@
 #import "LambdaAlert.h"
 
 @interface LambdaAlert () <UIAlertViewDelegate>
-@property(retain) UIAlertView *alert;
-@property(retain) NSMutableArray *blocks;
+@property(strong) UIAlertView *alert;
+@property(strong) NSMutableArray *blocks;
+@property(strong) id keepInMemory;
 @end
 
 @implementation LambdaAlert
-@synthesize alert, blocks, dismissAction;
+@synthesize alert, blocks, dismissAction, keepInMemory;
 
 - (id) initWithTitle: (NSString*) title message: (NSString*) message
 {
@@ -17,25 +18,18 @@
     return self;
 }
 
-- (void) dealloc
-{
-    [dismissAction release];
-    [alert release];
-    [blocks release];
-    [super dealloc];
-}
 
 - (void) show
 {
     [alert show];
-    [self retain];
+    [self setKeepInMemory:self];
 }
 
 - (void) addButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
 {
     if (!block) block = ^{};
     [alert addButtonWithTitle:title];
-    [blocks addObject:[[block copy] autorelease]];
+    [blocks addObject:[block copy]];
 }
 
 - (void) alertView: (UIAlertView*) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex
@@ -47,7 +41,7 @@
     if (dismissAction != NULL) {
         dismissAction();
     }
-    [self release];
+    [self setKeepInMemory:nil];
 }
 
 @end

@@ -1,12 +1,13 @@
 #import "LambdaSheet.h"
 
 @interface LambdaSheet () <UIActionSheetDelegate>
-@property(retain) UIActionSheet *sheet;
-@property(retain) NSMutableArray *blocks;
+@property(strong) UIActionSheet *sheet;
+@property(strong) NSMutableArray *blocks;
+@property(strong) id keepInMemory;
 @end
 
 @implementation LambdaSheet
-@synthesize sheet, blocks, dismissAction;
+@synthesize sheet, blocks, dismissAction, keepInMemory;
 
 - (id) initWithTitle: (NSString*) title
 {
@@ -17,13 +18,6 @@
     return self;
 }
 
-- (void) dealloc
-{
-    [dismissAction release];
-    [blocks release];
-    [sheet release];
-    [super dealloc];
-}
 
 #pragma mark Button Management
 
@@ -31,7 +25,7 @@
 {
     if (!block) block = ^{};
     [sheet addButtonWithTitle:title];
-    [blocks addObject:[[block copy] autorelease]];
+    [blocks addObject:[block copy]];
 }
 
 - (void) addDestructiveButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
@@ -56,31 +50,31 @@
 - (void) showInView: (UIView*) view
 {
     [sheet showInView:view];
-    [self retain];
+    [self setKeepInMemory:self];
 }
 
 - (void) showFromTabBar: (UITabBar*) view
 {
     [sheet showFromTabBar:view];
-    [self retain];
+    [self setKeepInMemory:self];
 }
 
 - (void) showFromToolbar: (UIToolbar*) view
 {
     [sheet showFromToolbar:view];
-    [self retain];
+    [self setKeepInMemory:self];
 }
 
 - (void) showFromBarButtonItem: (UIBarButtonItem*) item
 {
     [sheet showFromBarButtonItem:item animated:YES];
-    [self retain];
+    [self setKeepInMemory:self];
 }
 
 - (void) showFromRect: (CGRect) rect inView: (UIView*) view animated: (BOOL) animated
 {
     [sheet showFromRect:rect inView:view animated:animated];
-    [self retain];
+    [self setKeepInMemory:self];
 }
 
 - (void) dismissAnimated: (BOOL) animated
@@ -100,7 +94,7 @@
     if (dismissAction != NULL) {
         dismissAction();
     }
-    [self release];
+    [self setKeepInMemory:nil];
 }
 
 @end

@@ -23,7 +23,6 @@
         NSLog(@"Alert was dismissed.");
     }];
     [alert show];
-    [alert release];
 }
 
 - (IBAction) showDemoActionSheet
@@ -37,13 +36,7 @@
         NSLog(@"Sheet was dismissed.");
     }];
     [sheet showInView:window];
-    [sheet release];
 }
 
-- (void) dealloc
-{
-    [window release];
-    [super dealloc];
-}
 
 @end

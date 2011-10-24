@@ -1,6 +1,6 @@
 @interface Application : NSObject <UIApplicationDelegate> {}
 
-@property(retain, nonatomic) IBOutlet UIWindow *window;
+@property(strong, nonatomic) IBOutlet UIWindow *window;
 
 - (IBAction) showDemoAlert;
 - (IBAction) showDemoActionSheet;
