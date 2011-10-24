@@ -24,7 +24,6 @@ Displaying an alert:
     [alert addButtonWithTitle:@"Bar" block:^{ NSLog(@"Bar"); }];
     [alert addButtonWithTitle:@"Cancel" block:NULL];
     [alert show];
-    [alert release];
 
 Displaying a sheet:
 
@@ -34,7 +33,6 @@ Displaying a sheet:
     [sheet addDestructiveButtonWithTitle:@"Monk" block:^{ NSLog(@"Piano"); }];
     [sheet addCancelButtonWithTitle:@"Back to the Head"];
     [sheet showInView:window];
-    [sheet release];
 
 The memory management works as with the wrapped classes: you may release the
 alert/sheet after displaying and it will get released after dismissing. See the
