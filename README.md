@@ -34,9 +34,7 @@ Displaying a sheet:
     [sheet addCancelButtonWithTitle:@"Back to the Head"];
     [sheet showInView:window];
 
-The memory management works as with the wrapped classes: you may release the
-alert/sheet after displaying and it will get released after dismissing. See the
-demo project and source for details.
+The alert will keep itself from being deallocated until closed.
 
 Links
 -----
