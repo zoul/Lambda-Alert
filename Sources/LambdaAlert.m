@@ -18,11 +18,15 @@
     return self;
 }
 
-
 - (void) show
 {
     [alert show];
     [self setKeepInMemory:self];
+}
+
+- (void) dismissAnimated: (BOOL) animated
+{
+    [alert dismissWithClickedButtonIndex:0 animated:animated];
 }
 
 - (void) addButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
