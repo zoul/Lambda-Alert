@@ -17,7 +17,7 @@ Usage
 
 Displaying an alert:
 
-    LambdaAlert *alert = [[LambdaAlert alloc]
+    CCAlertView *alert = [[CCAlertView alloc]
         initWithTitle:@"Test Alert"
         message:@"See if the thing works."];
     [alert addButtonWithTitle:@"Foo" block:^{ NSLog(@"Foo"); }];
@@ -27,7 +27,7 @@ Displaying an alert:
 
 Displaying a sheet:
 
-    LambdaSheet *sheet = [[LambdaSheet alloc] initWithTitle:@"Action Sheet"];
+    CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:@"Action Sheet"];
     [sheet addButtonWithTitle:@"Miles" block:^{ NSLog(@"Trumpet"); }];
     [sheet addButtonWithTitle:@"Trane" block:^{ NSLog(@"Saxophone"); }];
     [sheet addDestructiveButtonWithTitle:@"Monk" block:^{ NSLog(@"Piano"); }];
@@ -35,6 +35,17 @@ Displaying a sheet:
     [sheet showInView:window];
 
 The alert will keep itself from being deallocated until closed.
+
+Extra features
+--------------
+
+* Both classes feature a `dismissAction` block that will be called when the
+  dialog is dismissed, be it with a button tap, cancelling or dismissing
+  through the `-dismissAnimated:` method.
+* Both classes have a `-dismissAnimated:` method that will dismiss the dialog
+  without pressing any of the buttons. This method does not perform the cancel
+  button action, but it *does* call the `dismissAction` block mentioned in the
+  previous bullet.
 
 Links
 -----
