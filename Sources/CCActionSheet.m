@@ -1,7 +1,7 @@
 #import "CCActionSheet.h"
 
 NSString *const CCActionSheetDismissAllSheetsNotification = @"CCActionSheetDismissAllSheetsNotification";
-NSString *const CCActionSheetAnimationKey = @"CCActionSheetAnimation";
+NSString *const CCActionSheetAnimatedKey = @"CCActionSheetAnimated";
 
 @interface CCActionSheet () <UIActionSheetDelegate>
 @property(strong) UIActionSheet *sheet;
@@ -55,7 +55,7 @@ NSString *const CCActionSheetAnimationKey = @"CCActionSheetAnimation";
     [[NSNotificationCenter defaultCenter]
         addObserverForName:CCActionSheetDismissAllSheetsNotification
         object:nil queue:nil usingBlock:^(NSNotification *event) {
-        id animated = [[event userInfo] objectForKey:CCActionSheetAnimationKey];
+        id animated = [[event userInfo] objectForKey:CCActionSheetAnimatedKey];
         [self dismissAnimated:[animated boolValue]];
     }];
 }

@@ -1,5 +1,5 @@
 extern NSString *const CCActionSheetDismissAllSheetsNotification;
-extern NSString *const CCActionSheetAnimationKey;
+extern NSString *const CCActionSheetAnimatedKey;
 
 @interface CCActionSheet : NSObject
 

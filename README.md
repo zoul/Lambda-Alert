@@ -50,7 +50,7 @@ Extra features
   notification center. The name of the notification is documented in the header
   files. If you want the dismissal to be animated, include a `userInfo`
   dictionary with the notification that returns an appropriate `NSNumber`
-  instance for `CCActionSheetAnimationKey` or `CCAlertViewAnimatedKey`. The
+  instance for `CCActionSheetAnimatedKey` or `CCAlertViewAnimatedKey`. The
   notification triggers `-dismissAnimated:`, so the notes above apply.
 
 Links
