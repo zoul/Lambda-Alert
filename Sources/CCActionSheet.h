@@ -1,3 +1,6 @@
+extern NSString *const CCActionSheetDismissAllSheetsNotification;
+extern NSString *const CCActionSheetAnimationKey;
+
 @interface CCActionSheet : NSObject
 
 @property(copy) dispatch_block_t dismissAction;

@@ -1,5 +1,8 @@
 #import "CCAlertView.h"
 
+NSString *const CCAlertViewDismissAllAlertsNotification = @"CCAlertViewDismissAllAlertsNotification";
+NSString *const CCAlertViewAnimatedKey = @"CCAlertViewAnimated";
+
 @interface CCAlertView () <UIAlertViewDelegate>
 @property(strong) UIAlertView *alert;
 @property(strong) NSMutableArray *blocks;
@@ -22,6 +25,12 @@
 {
     [alert show];
     [self setKeepInMemory:self];
+    [[NSNotificationCenter defaultCenter]
+        addObserverForName:CCAlertViewDismissAllAlertsNotification
+        object:nil queue:nil usingBlock:^(NSNotification *event) {
+        id animated = [[event userInfo] objectForKey:CCAlertViewAnimatedKey];
+        [self dismissAnimated:[animated boolValue]];
+    }];
 }
 
 - (void) dismissAnimated: (BOOL) animated
@@ -45,6 +54,7 @@
     if (dismissAction != NULL) {
         dismissAction();
     }
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setKeepInMemory:nil];
 }
 

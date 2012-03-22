@@ -1,3 +1,6 @@
+extern NSString *const CCAlertViewDismissAllAlertsNotification;
+extern NSString *const CCAlertViewAnimatedKey;
+
 @interface CCAlertView : NSObject
 
 @property(copy) dispatch_block_t dismissAction;

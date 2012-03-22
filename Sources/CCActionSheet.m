@@ -1,5 +1,8 @@
 #import "CCActionSheet.h"
 
+NSString *const CCActionSheetDismissAllSheetsNotification = @"CCActionSheetDismissAllSheetsNotification";
+NSString *const CCActionSheetAnimationKey = @"CCActionSheetAnimation";
+
 @interface CCActionSheet () <UIActionSheetDelegate>
 @property(strong) UIActionSheet *sheet;
 @property(strong) NSMutableArray *blocks;
@@ -47,34 +50,49 @@
 
 #pragma mark Display
 
+- (void) subscribeForDismissNotification
+{
+    [[NSNotificationCenter defaultCenter]
+        addObserverForName:CCActionSheetDismissAllSheetsNotification
+        object:nil queue:nil usingBlock:^(NSNotification *event) {
+        id animated = [[event userInfo] objectForKey:CCActionSheetAnimationKey];
+        [self dismissAnimated:[animated boolValue]];
+    }];
+}
+
 - (void) showInView: (UIView*) view
 {
     [sheet showInView:view];
     [self setKeepInMemory:self];
+    [self subscribeForDismissNotification];
 }
 
 - (void) showFromTabBar: (UITabBar*) view
 {
     [sheet showFromTabBar:view];
     [self setKeepInMemory:self];
+    [self subscribeForDismissNotification];
 }
 
 - (void) showFromToolbar: (UIToolbar*) view
 {
     [sheet showFromToolbar:view];
     [self setKeepInMemory:self];
+    [self subscribeForDismissNotification];
 }
 
 - (void) showFromBarButtonItem: (UIBarButtonItem*) item
 {
     [sheet showFromBarButtonItem:item animated:YES];
     [self setKeepInMemory:self];
+    [self subscribeForDismissNotification];
 }
 
 - (void) showFromRect: (CGRect) rect inView: (UIView*) view animated: (BOOL) animated
 {
     [sheet showFromRect:rect inView:view animated:animated];
     [self setKeepInMemory:self];
+    [self subscribeForDismissNotification];
 }
 
 - (void) dismissAnimated: (BOOL) animated
@@ -94,6 +112,7 @@
     if (dismissAction != NULL) {
         dismissAction();
     }
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setKeepInMemory:nil];
 }
 
