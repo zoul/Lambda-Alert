@@ -1,6 +1,6 @@
 #import "Application.h"
-#import "LambdaAlert.h"
-#import "LambdaSheet.h"
+#import "CCAlertView.h"
+#import "CCActionSheet.h"
 
 @implementation Application
 @synthesize window;
@@ -13,7 +13,7 @@
 
 - (IBAction) showDemoAlert
 {
-    LambdaAlert *alert = [[LambdaAlert alloc]
+    CCAlertView *alert = [[CCAlertView alloc]
         initWithTitle:@"Test Alert"
         message:@"See if the thing works."];
     [alert addButtonWithTitle:@"Foo" block:^{ NSLog(@"Foo"); }];
@@ -27,7 +27,7 @@
 
 - (IBAction) showDemoActionSheet
 {
-    LambdaSheet *sheet = [[LambdaSheet alloc] initWithTitle:@"Action Sheet"];
+    CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:@"Action Sheet"];
     [sheet addButtonWithTitle:@"Miles" block:^{ NSLog(@"Trumpet"); }];
     [sheet addButtonWithTitle:@"Trane" block:^{ NSLog(@"Saxophone"); }];
     [sheet addDestructiveButtonWithTitle:@"Monk" block:^{ NSLog(@"Piano"); }];

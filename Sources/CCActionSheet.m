@@ -1,12 +1,12 @@
-#import "LambdaSheet.h"
+#import "CCActionSheet.h"
 
-@interface LambdaSheet () <UIActionSheetDelegate>
+@interface CCActionSheet () <UIActionSheetDelegate>
 @property(strong) UIActionSheet *sheet;
 @property(strong) NSMutableArray *blocks;
 @property(strong) id keepInMemory;
 @end
 
-@implementation LambdaSheet
+@implementation CCActionSheet
 @synthesize sheet, blocks, dismissAction, keepInMemory;
 
 - (id) initWithTitle: (NSString*) title

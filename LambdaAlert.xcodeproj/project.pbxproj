@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		0D75681313A0A8590031D9FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75681213A0A8590031D9FA /* Foundation.framework */; };
 		0D75681F13A0A8C10031D9FA /* prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0D75681E13A0A8C10031D9FA /* prefix.pch */; };
-		0D75682413A0A8CE0031D9FA /* LambdaAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D75682013A0A8CE0031D9FA /* LambdaAlert.h */; };
-		0D75682513A0A8CE0031D9FA /* LambdaAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75682113A0A8CE0031D9FA /* LambdaAlert.m */; };
-		0D75682613A0A8CE0031D9FA /* LambdaSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D75682213A0A8CE0031D9FA /* LambdaSheet.h */; };
-		0D75682713A0A8CE0031D9FA /* LambdaSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75682313A0A8CE0031D9FA /* LambdaSheet.m */; };
+		0D75682413A0A8CE0031D9FA /* CCAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D75682013A0A8CE0031D9FA /* CCAlertView.h */; };
+		0D75682513A0A8CE0031D9FA /* CCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75682113A0A8CE0031D9FA /* CCAlertView.m */; };
+		0D75682613A0A8CE0031D9FA /* CCActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D75682213A0A8CE0031D9FA /* CCActionSheet.h */; };
+		0D75682713A0A8CE0031D9FA /* CCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D75682313A0A8CE0031D9FA /* CCActionSheet.m */; };
 		0D75685613A0A9890031D9FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75682E13A0A95C0031D9FA /* UIKit.framework */; };
 		0D75685713A0A9890031D9FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75681213A0A8590031D9FA /* Foundation.framework */; };
 		0D75685813A0A9890031D9FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D75683113A0A95C0031D9FA /* CoreGraphics.framework */; };
@@ -36,10 +36,10 @@
 		0D75680F13A0A8590031D9FA /* libLambdaAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLambdaAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D75681213A0A8590031D9FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D75681E13A0A8C10031D9FA /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = SOURCE_ROOT; };
-		0D75682013A0A8CE0031D9FA /* LambdaAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LambdaAlert.h; path = Sources/LambdaAlert.h; sourceTree = SOURCE_ROOT; };
-		0D75682113A0A8CE0031D9FA /* LambdaAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LambdaAlert.m; path = Sources/LambdaAlert.m; sourceTree = SOURCE_ROOT; };
-		0D75682213A0A8CE0031D9FA /* LambdaSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LambdaSheet.h; path = Sources/LambdaSheet.h; sourceTree = SOURCE_ROOT; };
-		0D75682313A0A8CE0031D9FA /* LambdaSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LambdaSheet.m; path = Sources/LambdaSheet.m; sourceTree = SOURCE_ROOT; };
+		0D75682013A0A8CE0031D9FA /* CCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCAlertView.h; path = Sources/CCAlertView.h; sourceTree = SOURCE_ROOT; };
+		0D75682113A0A8CE0031D9FA /* CCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCAlertView.m; path = Sources/CCAlertView.m; sourceTree = SOURCE_ROOT; };
+		0D75682213A0A8CE0031D9FA /* CCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCActionSheet.h; path = Sources/CCActionSheet.h; sourceTree = SOURCE_ROOT; };
+		0D75682313A0A8CE0031D9FA /* CCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCActionSheet.m; path = Sources/CCActionSheet.m; sourceTree = SOURCE_ROOT; };
 		0D75682E13A0A95C0031D9FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0D75683113A0A95C0031D9FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0D75685413A0A9890031D9FA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,10 +105,10 @@
 		0D75681413A0A8590031D9FA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0D75682013A0A8CE0031D9FA /* LambdaAlert.h */,
-				0D75682113A0A8CE0031D9FA /* LambdaAlert.m */,
-				0D75682213A0A8CE0031D9FA /* LambdaSheet.h */,
-				0D75682313A0A8CE0031D9FA /* LambdaSheet.m */,
+				0D75682013A0A8CE0031D9FA /* CCAlertView.h */,
+				0D75682113A0A8CE0031D9FA /* CCAlertView.m */,
+				0D75682213A0A8CE0031D9FA /* CCActionSheet.h */,
+				0D75682313A0A8CE0031D9FA /* CCActionSheet.m */,
 				0D75681E13A0A8C10031D9FA /* prefix.pch */,
 			);
 			name = Sources;
@@ -135,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D75681F13A0A8C10031D9FA /* prefix.pch in Headers */,
-				0D75682413A0A8CE0031D9FA /* LambdaAlert.h in Headers */,
-				0D75682613A0A8CE0031D9FA /* LambdaSheet.h in Headers */,
+				0D75682413A0A8CE0031D9FA /* CCAlertView.h in Headers */,
+				0D75682613A0A8CE0031D9FA /* CCActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D75682513A0A8CE0031D9FA /* LambdaAlert.m in Sources */,
-				0D75682713A0A8CE0031D9FA /* LambdaSheet.m in Sources */,
+				0D75682513A0A8CE0031D9FA /* CCAlertView.m in Sources */,
+				0D75682713A0A8CE0031D9FA /* CCActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

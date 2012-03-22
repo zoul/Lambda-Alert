@@ -1,4 +1,4 @@
-@interface LambdaSheet : NSObject
+@interface CCActionSheet : NSObject
 
 @property(copy) dispatch_block_t dismissAction;
 

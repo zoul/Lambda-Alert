@@ -1,12 +1,12 @@
-#import "LambdaAlert.h"
+#import "CCAlertView.h"
 
-@interface LambdaAlert () <UIAlertViewDelegate>
+@interface CCAlertView () <UIAlertViewDelegate>
 @property(strong) UIAlertView *alert;
 @property(strong) NSMutableArray *blocks;
 @property(strong) id keepInMemory;
 @end
 
-@implementation LambdaAlert
+@implementation CCAlertView
 @synthesize alert, blocks, dismissAction, keepInMemory;
 
 - (id) initWithTitle: (NSString*) title message: (NSString*) message

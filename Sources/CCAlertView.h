@@ -1,4 +1,4 @@
-@interface LambdaAlert : NSObject
+@interface CCAlertView : NSObject
 
 @property(copy) dispatch_block_t dismissAction;
 
