@@ -26,7 +26,7 @@
 
 - (void) dismissAnimated: (BOOL) animated
 {
-    [alert dismissWithClickedButtonIndex:0 animated:animated];
+    [alert dismissWithClickedButtonIndex:-1 animated:animated];
 }
 
 - (void) addButtonWithTitle: (NSString*) title block: (dispatch_block_t) block
