@@ -59,11 +59,17 @@ NSString *const CCAlertViewAnimatedKey = @"CCAlertViewAnimated";
 }
 
 - (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex {
-    return [alert textFieldAtIndex:textFieldIndex];
+    if ([alert respondsToSelector:@selector(textFieldAtIndex:)]) {
+        return [alert textFieldAtIndex:textFieldIndex];
+    } else {
+        return nil;
+    }
 }
 
 - (void) setAlertViewStyle:(UIAlertViewStyle)alertViewStyle {
-    alert.alertViewStyle = alertViewStyle;
+    if ([alert respondsToSelector:@selector(alertViewStyle)]) {
+        alert.alertViewStyle = alertViewStyle;
+    }
 }
 
 @end
