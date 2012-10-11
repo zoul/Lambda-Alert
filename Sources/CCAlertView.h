@@ -11,6 +11,7 @@ extern NSString *const CCAlertViewAnimatedKey;
 
 - (void) show;
 - (void) dismissAnimated: (BOOL) animated;
-- (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex;
+
+- (UITextField*) textFieldAtIndex: (NSInteger) textFieldIndex;
 
 @end
