@@ -74,4 +74,53 @@ NSString *const CCAlertViewAnimatedKey = @"CCAlertViewAnimated";
     }
 }
 
+#pragma mark - Convenience methods
+
++ (id) alertWithTitle:(NSString *)title message:(NSString *)message
+{
+	return [[self alloc] initWithTitle:title message:message];
+}
+
++ (id) alertWithTitle:(NSString *)title
+{
+	return [[self alloc] initWithTitle:title message:nil];
+}
+
++ (id) alertWithMessage:(NSString *)message
+{
+	return [[self alloc] initWithTitle:nil message:message];
+}
+
++ (void) showAlertWithTitle:(NSString *)title message:(NSString *)message block:(dispatch_block_t)block
+{
+	CCAlertView *alert = [self alertWithTitle:title message:message];
+	[alert addButtonWithTitle:@"OK" block:block];
+	[alert show];
+}
+
++ (void) showAlertWithTitle:(NSString *)title block:(dispatch_block_t)block
+{
+	[self showAlertWithTitle:title message:nil block:block];
+}
+
++ (void) showAlertWithMessage:(NSString *)message block:(dispatch_block_t)block
+{
+	[self showAlertWithTitle:nil message:message block:block];
+}
+
++ (void) showAlertWithTitle:(NSString *)title message:(NSString *)message
+{
+	[self showAlertWithTitle:title message:message block:nil];
+}
+
++ (void) showAlertWithTitle:(NSString *)title
+{
+	[self showAlertWithTitle:title block:nil];
+}
+
++ (void) showAlertWithMessage:(NSString *)message
+{
+	[self showAlertWithMessage:message block:nil];
+}
+
 @end
