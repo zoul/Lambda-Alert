@@ -67,7 +67,7 @@ Author & License
 
 Licensed under the terms of the [MIT License][mit]:
 
-Copyright (c) Tomáš Znamenáček, <tomas.znamenacek@gmail.com>
+Copyright © Tomáš Znamenáček, <tomas.znamenacek@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
