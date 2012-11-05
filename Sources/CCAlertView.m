@@ -25,12 +25,16 @@ NSString *const CCAlertViewAnimatedKey = @"CCAlertViewAnimated";
 {
     [alert show];
     [self setKeepInMemory:self];
-    [[NSNotificationCenter defaultCenter]
-        addObserverForName:CCAlertViewDismissAllAlertsNotification
-        object:nil queue:nil usingBlock:^(NSNotification *event) {
-        id animated = [[event userInfo] objectForKey:CCAlertViewAnimatedKey];
-        [self dismissAnimated:[animated boolValue]];
-    }];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(dismissFromNotification:)
+        name:CCAlertViewDismissAllAlertsNotification
+        object:nil];
+}
+
+- (void) dismissFromNotification: (NSNotification*) event
+{
+    id animated = [[event userInfo] objectForKey:CCAlertViewAnimatedKey];
+    [self dismissAnimated:[animated boolValue]];
 }
 
 - (void) dismissAnimated: (BOOL) animated

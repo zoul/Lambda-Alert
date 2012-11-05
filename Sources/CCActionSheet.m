@@ -52,12 +52,16 @@ NSString *const CCActionSheetAnimatedKey = @"CCActionSheetAnimated";
 
 - (void) subscribeForDismissNotification
 {
-    [[NSNotificationCenter defaultCenter]
-        addObserverForName:CCActionSheetDismissAllSheetsNotification
-        object:nil queue:nil usingBlock:^(NSNotification *event) {
-        id animated = [[event userInfo] objectForKey:CCActionSheetAnimatedKey];
-        [self dismissAnimated:[animated boolValue]];
-    }];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(dismissFromNotification:)
+        name:CCActionSheetDismissAllSheetsNotification
+        object:nil];
+}
+
+- (void) dismissFromNotification: (NSNotification*) event
+{
+    id animated = [[event userInfo] objectForKey:CCActionSheetAnimatedKey];
+    [self dismissAnimated:[animated boolValue]];
 }
 
 - (void) showInView: (UIView*) view
