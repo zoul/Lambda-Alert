@@ -8,9 +8,15 @@ delegate callbacks and button indexes.
 Installing
 ----------
 
-You can clone the whole repository and drag the project to an Xcode workspace.
-Then you can add libLambdaAlert to the list of linked libraries for your target
-and start using the code.
+This project includes a `podspec` for usage with [CocoaPods](http://http://cocoapods.org/). Simply add
+
+    pod 'Lambda-Alert'
+
+to your `Podfile` and run `pod install`.
+
+Alternately, you can add all of the files contained in this project's `Library` directory to your Xcode project. If your project does not use ARC, you will need to enable ARC on these files. You can enable ARC per-file by adding the -fobjc-arc flag, as described on [a common StackOverflow question](http://stackoverflow.com/questions/6646052/how-can-i-disable-arc-for-a-single-file-in-a-project).
+
+Finally, you could clone the whole repository and drag the project to an Xcode workspace. Then you can add libLambdaAlert to the list of linked libraries for your target and start using the code.
 
 Usage
 -----
