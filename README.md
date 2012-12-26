@@ -8,7 +8,7 @@ delegate callbacks and button indexes.
 Installing
 ----------
 
-This project includes a `podspec` for usage with [CocoaPods](http://http://cocoapods.org/). Simply add
+This project includes a `podspec` for usage with [CocoaPods](http://cocoapods.org/). Simply add
 
     pod 'Lambda-Alert'
 
