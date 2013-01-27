@@ -21,6 +21,17 @@ NSString *const CCAlertViewAnimatedKey = @"CCAlertViewAnimated";
     return self;
 }
 
+- (id) initWithTitle: (NSString*) title message: (NSString*) message cancelButtonTitle:(NSString*)cancelButtonTitle cancelButtonBlock:(dispatch_block_t)cancelButtonBlock firstOtherButtonTitle:(NSString*)firstOtherButtonTitle firstOtherButtonBlock:(dispatch_block_t)firstOtherButtonBlock
+{
+    self = [super init];
+    alert = [[UIAlertView alloc] initWithTitle:title message:message
+                                      delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:firstOtherButtonTitle, nil];
+    if (!cancelButtonBlock) cancelButtonBlock = ^{};
+    if (!firstOtherButtonBlock) firstOtherButtonBlock = ^{};
+    blocks = [[NSMutableArray alloc] initWithObjects:[cancelButtonBlock copy], [firstOtherButtonBlock copy], nil];
+    return self;
+}
+
 - (void) show
 {
     [alert show];
@@ -75,6 +86,18 @@ NSString *const CCAlertViewAnimatedKey = @"CCAlertViewAnimated";
 {
     if ([alert respondsToSelector:@selector(alertViewStyle)]) {
         [alert setAlertViewStyle:alertViewStyle];
+    }
+}
+
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
+{
+    if (self.shouldEnableFirstOtherButtonBlock)
+    {
+        return self.shouldEnableFirstOtherButtonBlock();
+    }
+    else
+    {
+        return YES;
     }
 }
 
