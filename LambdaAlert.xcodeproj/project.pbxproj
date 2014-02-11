@@ -183,6 +183,8 @@
 /* Begin PBXProject section */
 		0D75680613A0A8590031D9FA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 0D75680913A0A8590031D9FA /* Build configuration list for PBXProject "LambdaAlert" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -275,6 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/LambdaAlert.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -290,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/LambdaAlert.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
