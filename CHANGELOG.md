@@ -1,3 +1,7 @@
+## unreleased
+
+* Added header documentation.
+
 ## 1.0.1
 
 * First release with a changelog :)
