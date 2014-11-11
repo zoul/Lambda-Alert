@@ -3,7 +3,8 @@
 
 This repo contains two simple wrappers around `UIAlertView` and `UIActionSheet`
 that allow you to use blocks for actions, so that you don’t have to mess with
-delegate callbacks and button indexes.
+delegate callbacks and button indexes. Please note that since iOS 8 you should
+use the official [`UIAlertController`](http://nshipster.com/uialertcontroller/) instead.
 
 Installing
 ----------
